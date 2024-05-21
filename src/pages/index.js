@@ -14,6 +14,7 @@ export default function Home() {
   const mintUrl = data[id]?.mintUrl ? data[id].mintUrl : data[1].mintUrl;
   const postUrl = data[id]?.postUrl ? data[id].postUrl : data[1].postUrl;
   const buttons = data[id]?.buttons ? data[id].buttons : data[1].buttons;
+  const aspectRatio = data[id]?.aspectRatio ? data[id].aspectRatio : data[1].aspectRatio;
 
   return (
     <>
@@ -29,6 +30,7 @@ export default function Home() {
         <meta property="fc:frame:post_url" content={postUrl} />
         <meta property="og:image" content={imageUrl} />
         <meta name="fc:frame:image" content={imageUrl} />
+        <meta name="fc:frame:image:aspect_ratio" content={aspectRatio} />
         {buttons.map((button, index) => (
           <React.Fragment key={index}>
             <meta name={`fc:frame:button:${index + 1}`} content={button.text} />
