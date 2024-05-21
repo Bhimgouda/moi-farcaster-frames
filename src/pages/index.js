@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import data from "../data.json";
+import React from "react";
 
 export default function Home() {
   const router = useRouter();
@@ -28,11 +29,11 @@ export default function Home() {
         <meta property="og:image" content={imageUrl} />
         <meta name="fc:frame:image" content={imageUrl} />
         {buttons.map((button, index) => (
-          <div key={index}>
-            <meta name="fc:frame:button:2" content={button.text} />
-            <meta name="fc:frame:button:2:action" content="link" />
-            <meta name="fc:frame:button:2:target" content={button.url} />
-          </div>
+          <React.Fragment key={index}>
+            <meta name={`fc:frame:button:${index}`} content={button.text} />
+            <meta name={`fc:frame:button:${index}:action`} content="link" />
+            <meta name={`fc:frame:button:${index}:target`} content={button.url} />
+          </React.Fragment>
         ))}
       </Head>
       <img src={imageUrl} />
