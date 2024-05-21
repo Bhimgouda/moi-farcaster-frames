@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import data from "../data.json";
 import React from "react";
+import styles from "@/styles/Home.module.css";
 
 export default function Home() {
   const router = useRouter();
@@ -30,16 +31,23 @@ export default function Home() {
         <meta name="fc:frame:image" content={imageUrl} />
         {buttons.map((button, index) => (
           <React.Fragment key={index}>
-            <meta name={`fc:frame:button:${index}`} content={button.text} />
-            <meta name={`fc:frame:button:${index}:action`} content="link" />
-            <meta name={`fc:frame:button:${index}:target`} content={button.url} />
+            <meta name={`fc:frame:button:${index + 1}`} content={button.text} />
+            <meta name={`fc:frame:button:${index + 1}:action`} content="link" />
+            <meta name={`fc:frame:button:${index + 1}:target`} content={button.url} />
           </React.Fragment>
         ))}
       </Head>
-      <img src={imageUrl} />
-      <a href="https://zora.co/collect/zora:0x6182f15c5b155dae7b2166ed90f554a83fb61557/1">
-        <button>Mint NFT</button>
-      </a>
+      <main className={styles.main}>
+        <section className={styles.section}>
+          <img className={styles.nft} src={imageUrl} />
+        </section>
+        <section className={styles.section}>
+          <h2>Collect MOI NFT's</h2>
+          <a href="https://zora.co/collect/zora:0x6182f15c5b155dae7b2166ed90f554a83fb61557/1">
+            <button className={styles.btn}>Mint on Zora</button>
+          </a>
+        </section>
+      </main>
     </>
   );
 }
