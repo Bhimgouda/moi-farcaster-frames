@@ -2,7 +2,7 @@
   "1": {
     "title": "Mint MOI NFT",
     "description": "Time to mint the MOI nft's on Zora",
-    "aspectRatio": "1:1",
+    "aspectRatio": "1:1.08",
     "imageUrl": "https://remote-image.decentralized-content.com/image?url=https%3A%2F%2Fmagic.decentralized-content.com%2Fipfs%2Fbafybeibqygserrcjhysj7mxusjwmkk4ojykc3iebyrmmauid6zsd2dddom&w=1920&q=75",
     "postUrl": "https://zora.co/collect/zora:0x6182f15c5b155dae7b2166ed90f554a83fb61557/1",
     "buttons": [
