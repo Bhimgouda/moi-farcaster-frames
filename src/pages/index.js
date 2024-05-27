@@ -46,7 +46,7 @@ export default function Home() {
         <section className={styles.section}>
           <h2>Collect MOI NFT's</h2>
           <a href="https://zora.co/collect/zora:0x6182f15c5b155dae7b2166ed90f554a83fb61557/1">
-            <button className={styles.btn}>Mint on Zora</button>
+            <button className={styles.btn}>Mint</button>
           </a>
         </section>
       </main>
